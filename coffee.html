@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Coffee & Beverages</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#faf7f3;
+  --text:#2a2a2a;
+  --accent:#8b4a3c;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+header{
+  background:#fff;
+  padding:16px 40px;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  text-decoration:none;
+  margin-left:20px;
+  color:var(--text);
+  font-size:14px;
+}
+
+section{
+  max-width:900px;
+  margin:auto;
+  padding:80px 30px;
+}
+
+h1{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  opacity:.75;
+  margin-bottom:40px;
+}
+
+.divider{
+  width:60px;
+  height:3px;
+  background:var(--accent);
+  margin:18px 0 40px;
+}
+
+.menu-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  border-bottom:1px dashed #ddd;
+  padding:14px 0;
+}
+
+.menu-item:last-child{
+  border-bottom:none;
+}
+
+.item-name{
+  font-weight:600;
+}
+
+.item-desc{
+  font-size:13px;
+  opacity:.75;
+  margin-top:4px;
+}
+
+.price{
+  font-weight:600;
+  color:var(--accent);
+  white-space:nowrap;
+}
+
+.order{
+  font-size:13px;
+  margin-top:6px;
+  display:inline-block;
+  color:var(--accent);
+  text-decoration:none;
+}
+
+.order:hover{
+  text-decoration:underline;
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:40px;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<strong>Café & Restaurant</strong>
+<div>
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="index.html#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<section>
+<h1>Coffee & Beverages</h1>
+<p class="subtitle">
+Carefully brewed · Hot & Cold selections
+</p>
+
+<div class="divider"></div>
+
+<!-- HOT COFFEE -->
+<div class="menu-item">
+  <div>
+    <div class="item-name">Espresso</div>
+    <div class="item-desc">Strong, single shot</div>
+    <a class="order"
+       href="https://wa.me/918076640767?text=Order%20Espresso">
+       Order on WhatsApp
+    </a>
+  </div>
+  <div class="price">₹150</div>
+</div>
+
+<div class="menu-item">
+  <div>
+    <div class="item-name">Cappuccino</div>
+    <div class="item-desc">Espresso with steamed milk & foam</div>
+    <a class="order"
+       href="https://wa.me/918076640767?text=Order%20Cappuccino">
+       Order on WhatsApp
+    </a>
+  </div>
+  <div class="price">₹180</div>
+</div>
+
+<div class="menu-item">
+  <div>
+    <div class="item-name">Caffè Latte</div>
+    <div class="item-desc">Smooth milk-based coffee</div>
+    <a class="order"
+       href="https://wa.me/918076640767?text=Order%20Latte">
+       Order on WhatsApp
+    </a>
+  </div>
+  <div class="price">₹190</div>
+</div>
+
+<!-- COLD COFFEE -->
+<div class="menu-item">
+  <div>
+    <div class="item-name">Cold Coffee</div>
+    <div class="item-desc">Chilled & refreshing</div>
+    <a class="order"
+       href="https://wa.me/918076640767?text=Order%20Cold%20Coffee">
+       Order on WhatsApp
+    </a>
+  </div>
+  <div class="price">₹200</div>
+</div>
+
+<div class="menu-item">
+  <div>
+    <div class="item-name">Iced Caramel Coffee</div>
+    <div class="item-desc">Cold brew with caramel notes</div>
+    <a class="order"
+       href="https://wa.me/918076640767?text=Order%20Iced%20Caramel%20Coffee">
+       Order on WhatsApp
+    </a>
+  </div>
+  <div class="price">₹220</div>
+</div>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/918076640767">
+WhatsApp Order
+</a>
+
+</body>
+</html>
