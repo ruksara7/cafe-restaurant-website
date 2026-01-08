@@ -6,19 +6,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#faf9f7;color:#2a2a2a}
-header{background:#fff;padding:16px 40px;border-bottom:1px solid #eee;position:sticky;top:0}
-nav{display:flex;justify-content:space-between;align-items:center}
-nav a{text-decoration:none;margin-left:20px;color:#2a2a2a;font-size:14px}
-section{max-width:1200px;margin:auto;padding:70px 40px}
-h1{font-size:42px;margin-bottom:10px}
-h2{font-size:28px;margin-bottom:15px}
-.btn{background:#6b4f3f;color:#fff;padding:12px 22px;border-radius:4px;text-decoration:none;margin-right:10px;font-size:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:30px}
-.card{background:#fff;border:1px solid #eee;border-radius:6px;padding:20px}
-.card img{width:100%;border-radius:6px}
-footer{background:#fff;border-top:1px solid #eee;padding:30px;text-align:center;font-size:14px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 20px;border-radius:40px;text-decoration:none}
+:root{
+  --bg:#faf7f3;
+  --card:#ffffff;
+  --text:#2a2a2a;
+  --accent:#8b4a3c;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+header{
+  background:#fff;
+  padding:16px 40px;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  text-decoration:none;
+  margin-left:20px;
+  color:var(--text);
+  font-size:14px;
+}
+
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 40px;
+}
+
+h1{font-size:44px;margin-bottom:12px}
+h2{font-size:30px;margin-bottom:12px}
+
+.highlight{color:var(--accent)}
+
+.divider{
+  width:60px;
+  height:3px;
+  background:var(--accent);
+  margin:18px 0;
+}
+
+.subtitle{
+  max-width:650px;
+  opacity:.85;
+}
+
+.btn{
+  background:var(--accent);
+  color:#fff;
+  padding:12px 22px;
+  border-radius:4px;
+  text-decoration:none;
+  margin-right:10px;
+  font-size:14px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+  margin-top:40px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid #eee;
+  border-radius:6px;
+  padding:20px;
+}
+
+.card img{
+  width:100%;
+  border-radius:6px;
+  margin-bottom:10px;
+}
+
+footer{
+  background:#fff;
+  border-top:1px solid #eee;
+  padding:30px;
+  text-align:center;
+  font-size:14px;
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:40px;
+  text-decoration:none;
+}
 </style>
 </head>
 
@@ -37,51 +130,128 @@ footer{background:#fff;border-top:1px solid #eee;padding:30px;text-align:center;
 </nav>
 </header>
 
+<!-- HERO : CAFE AMBIENCE -->
 <section id="home">
-<h1>Fresh Cakes & Coffee in the Heart of Delhi</h1>
-<p>A calm café experience with handcrafted desserts and premium coffee.</p>
+<h1>
+Fresh Cakes & Coffee in the  
+<span class="highlight">Heart of Delhi</span>
+</h1>
+
+<div class="divider"></div>
+
+<p class="subtitle">
+A calm café experience where people gather, relax, and enjoy handcrafted food.
+</p>
+
 <br>
+
 <a class="btn" href="https://wa.me/918076640767">Order on WhatsApp</a>
 <a class="btn" href="tel:+918076640767">Call Now</a>
+
 <br><br>
-<img src="mum2.png" alt="Cafe ambience" style="width:100%;border-radius:8px">
+
+<!-- CORRECT: REAL CAFE INTERIOR -->
+<img src="mum2.png" alt="Cafe interior" style="width:100%;border-radius:8px">
 </section>
 
+<!-- OFFERINGS (NO IMAGES THAT MISLEAD) -->
 <section>
 <h2>Our Offerings</h2>
+<div class="divider"></div>
+
 <div class="grid">
-<div class="card">Fresh Cakes</div>
-<div class="card">Coffee & Beverages</div>
-<div class="card">Desserts</div>
-<div class="card">Savoury Snacks</div>
-<div class="card">Custom Orders</div>
-<div class="card">Dine-in & Takeaway</div>
+<div class="card"><strong>Fresh Cakes</strong></div>
+<div class="card"><strong>Coffee & Beverages</strong></div>
+<div class="card"><strong>Desserts</strong></div>
+<div class="card"><strong>Savoury Snacks</strong></div>
+<div class="card"><strong>Custom Orders</strong></div>
+<div class="card"><strong>Dine-in & Takeaway</strong></div>
 </div>
 </section>
 
+<!-- SIGNATURE CAKES (CATEGORY MOOD ONLY) -->
+<section>
+<h2>Signature Cakes</h2>
+<div class="divider"></div>
+
+<div class="grid">
+<div class="card">
+<img src="mum5.png" alt="Chocolate Cake">
+<strong>Chocolate Celebration Cake</strong>
+</div>
+
+<div class="card">
+<img src="mum7.png" alt="Vanilla Cake">
+<strong>Classic Vanilla Cake</strong>
+</div>
+</div>
+</section>
+
+<!-- COFFEE HIGHLIGHTS -->
+<section>
+<h2>Coffee Highlights</h2>
+<div class="divider"></div>
+
+<div class="grid">
+<div class="card">
+<img src="mum6.png" alt="Hot Coffee">
+<strong>Hot Coffee & Lattes</strong>
+</div>
+
+<div class="card">
+<img src="mum8.png" alt="Iced Coffee">
+<strong>Cold & Iced Coffee</strong>
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
 <section id="gallery">
 <h2>Inside the Café</h2>
+<div class="divider"></div>
+
 <div class="grid">
-<div class="card"><img src="mum4.png"><p>Our team & service</p></div>
-<div class="card"><img src="mum3.png"><p>Quality coffee preparation</p></div>
+<div class="card">
+<img src="mum4.png" alt="Cafe staff">
+<p>Our team & service</p>
+</div>
+
+<div class="card">
+<img src="mum3.png" alt="Coffee preparation">
+<p>Coffee crafted with care</p>
+</div>
 </div>
 </section>
 
+<!-- LOCATION -->
 <section id="location">
 <h2>Visit Us</h2>
-<p>Open Daily: 10 AM – 11 PM</p>
-<a class="btn" target="_blank" href="https://maps.app.goo.gl/iBFF1RrKezFmrgfK6">View on Google Maps</a>
+<div class="divider"></div>
+
+<p>Open Daily · 10 AM – 11 PM</p>
+
+<a class="btn" target="_blank"
+href="https://maps.app.goo.gl/iBFF1RrKezFmrgfK6">
+View on Google Maps
+</a>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
+<div class="divider"></div>
+
 <a class="btn" href="https://wa.me/918076640767">WhatsApp</a>
 <a class="btn" href="tel:+918076640767">Call</a>
 </section>
 
-<footer>© 2026 Café & Restaurant — Delhi</footer>
+<footer>
+© 2026 Café & Restaurant — Delhi
+</footer>
 
-<a class="whatsapp" href="https://wa.me/918076640767">WhatsApp Order</a>
+<a class="whatsapp" href="https://wa.me/918076640767">
+WhatsApp Order
+</a>
 
 </body>
 </html>
