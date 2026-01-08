@@ -1,183 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Menu | Café & Restaurant</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore our café menu – cakes, coffee, desserts and more. Order directly on WhatsApp.">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #faf9f7;
-      color: #2a2a2a;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #ffffff;
-      padding: 18px 40px;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      margin-left: 22px;
-      text-decoration: none;
-      color: #2a2a2a;
-      font-size: 14px;
-    }
-
-    section {
-      padding: 80px 40px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 42px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 26px;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-
-    p {
-      max-width: 720px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 26px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      padding: 24px;
-      text-align: center;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 18px;
-      background: #6b4f3f;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-
-    footer {
-      background: #ffffff;
-      border-top: 1px solid #eee;
-      padding: 30px 40px;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      background: #25D366;
-      color: #ffffff;
-      padding: 14px 20px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#faf9f7;color:#2a2a2a}
+header{background:#fff;padding:16px 40px;border-bottom:1px solid #eee}
+section{max-width:1100px;margin:auto;padding:70px 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card{background:#fff;border:1px solid #eee;padding:20px;border-radius:6px;text-align:center}
+.card img{width:100%;border-radius:6px}
+.btn{background:#6b4f3f;color:#fff;padding:10px 18px;border-radius:4px;text-decoration:none;display:inline-block;margin-top:10px}
+</style>
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <strong>Café & Restaurant</strong>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-  </nav>
-</header>
+<header><strong>Café & Restaurant</strong></header>
 
 <section>
-  <h1>Our Menu</h1>
-  <p>
-    Explore our selection of freshly baked cakes, handcrafted coffee,
-    and café favourites. Tap any category to view items and order.
-  </p>
+<h1>Menu</h1>
 
-  <div class="grid">
+<div class="grid">
+<div class="card">
+<img src="mum2.jpg">
+<h3>Cakes</h3>
+<a class="btn" href="cakes.html">View Cakes</a>
+</div>
 
-    <!-- CAKES -->
-    <div class="card">
-      <img src="images/img-cakes-display.jpg" alt="Cakes">
-      <h2>Cakes</h2>
-      <p>Vanilla, Chocolate, Red Velvet, Cheesecake & more</p>
-      <a class="btn" href="cakes.html">View Cakes</a>
-    </div>
-
-    <!-- COFFEE -->
-    <div class="card">
-      <img src="images/img-barista.jpg" alt="Coffee">
-      <h2>Coffee & Beverages</h2>
-      <p>Espresso, Cappuccino, Latte, Cold Coffee</p>
-      <a class="btn" href="coffee.html">View Coffee</a>
-    </div>
-
-    <!-- DESSERTS -->
-    <div class="card">
-      <img src="images/img-cakes-display.jpg" alt="Desserts">
-      <h2>Desserts</h2>
-      <p>Pastries, brownies, sweet treats</p>
-      <a class="btn" href="#">View Desserts</a>
-    </div>
-
-    <!-- SAVOURY -->
-    <div class="card">
-      <img src="images/img-staff-serving.jpg" alt="Savoury">
-      <h2>Savoury</h2>
-      <p>Sandwiches, snacks, café bites</p>
-      <a class="btn" href="#">View Savoury</a>
-    </div>
-
-  </div>
+<div class="card">
+<img src="mum3.jpg">
+<h3>Coffee</h3>
+<a class="btn" href="#">View Coffee</a>
+</div>
+</div>
 </section>
 
-<footer>
-  © 2026 Café & Restaurant — Delhi, India
-</footer>
-
-<a class="whatsapp-float"
-   href="https://wa.me/918076640767?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order.">
-  WhatsApp Order
-</a>
+<section>
+<h2>UPI Payment (Demo)</h2>
+<p>Scan after confirming order (demo only)</p>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=cafe.demo@upi&pn=DemoCafe">
+</section>
 
 </body>
 </html>
