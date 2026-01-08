@@ -2,95 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Modern Café & Restaurant</title>
+  <title>Café & Restaurant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Modern café & restaurant website focused on design, clarity, and direct WhatsApp ordering.">
+  <meta name="description" content="Premium café & restaurant website with menu, gallery, WhatsApp ordering and location support.">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #2b2b2b;
+      font-family: "Helvetica Neue", Arial, sans-serif;
       background: #faf9f7;
+      color: #2a2a2a;
       line-height: 1.6;
     }
+
     header {
-      padding: 20px 40px;
       background: #ffffff;
+      padding: 18px 40px;
+      border-bottom: 1px solid #eee;
       position: sticky;
       top: 0;
-      z-index: 10;
-      border-bottom: 1px solid #eee;
+      z-index: 100;
     }
+
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     nav a {
-      margin-left: 20px;
+      margin-left: 22px;
       text-decoration: none;
-      color: #2b2b2b;
+      color: #2a2a2a;
       font-size: 14px;
     }
+
     section {
-      padding: 70px 40px;
-      max-width: 1100px;
+      padding: 80px 40px;
+      max-width: 1200px;
       margin: auto;
     }
-    h1, h2 {
-      font-weight: normal;
-    }
+
     h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: 44px;
+      margin-bottom: 12px;
+      font-weight: 500;
     }
+
     h2 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 20px;
+      font-weight: 500;
     }
+
     .btn {
       display: inline-block;
-      margin-right: 15px;
       padding: 12px 22px;
-      background: #2b2b2b;
-      color: #fff;
+      margin-right: 14px;
+      background: #2a2a2a;
+      color: #ffffff;
       text-decoration: none;
       border-radius: 4px;
       font-size: 14px;
     }
+
     .btn.secondary {
       background: #6b4f3f;
     }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 26px;
+      margin-top: 40px;
     }
+
     .card {
       background: #ffffff;
-      padding: 25px;
-      border-radius: 6px;
       border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 24px;
     }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
     footer {
       background: #ffffff;
-      padding: 30px 40px;
       border-top: 1px solid #eee;
+      padding: 40px;
       font-size: 14px;
     }
-    .price {
-      float: right;
-      color: #6b4f3f;
-      font-weight: bold;
-    }
-    .whatsapp {
+
+    .whatsapp-float {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 22px;
+      right: 22px;
       background: #25D366;
-      color: #fff;
-      padding: 14px 18px;
-      border-radius: 50px;
+      color: #ffffff;
+      padding: 14px 20px;
+      border-radius: 40px;
       text-decoration: none;
       font-size: 14px;
     }
@@ -104,7 +118,7 @@
     <strong>Café & Restaurant</strong>
     <div>
       <a href="#home">Home</a>
-      <a href="#menu">Menu</a>
+      <a href="menu.html">Menu</a>
       <a href="#gallery">Gallery</a>
       <a href="#about">About</a>
       <a href="#location">Location</a>
@@ -113,18 +127,32 @@
   </nav>
 </header>
 
+<!-- HERO (Mum1) -->
 <section id="home">
   <h1>Fresh Cakes & Coffee in the Heart of Delhi</h1>
   <p>A warm café experience for handcrafted desserts, coffee, and calm conversations.</p>
+
   <br>
-  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20order." class="btn secondary">Order on WhatsApp</a>
-  <a href="tel:+91XXXXXXXXXX" class="btn">Call Now</a>
+
+  <a class="btn secondary"
+     href="https://wa.me/918076640767?text=Hi%2C%20I%20would%20like%20to%20order%20from%20your%20cafe.">
+     Order on WhatsApp
+  </a>
+
+  <a class="btn" href="tel:+918076640767">Call Now</a>
+
   <p><small>Dine-in • Takeaway • Custom Orders</small></p>
+
+  <br><br>
+
+  <img src="images/img-hero-coffee.jpg" alt="Cafe coffee ambience">
 </section>
 
+<!-- OFFERINGS -->
 <section>
   <h2>Our Offerings</h2>
   <p>Thoughtfully prepared items, served fresh every day.</p>
+
   <div class="grid">
     <div class="card">Freshly Baked Cakes</div>
     <div class="card">Coffee & Beverages</div>
@@ -135,72 +163,84 @@
   </div>
 </section>
 
-<section id="menu">
-  <h2>Explore Our Menu</h2>
+<!-- CAKES HIGHLIGHT (Mum2) -->
+<section>
+  <h2>Signature Cakes</h2>
+  <p>Our most loved cakes, baked in-house and served fresh.</p>
 
-  <div class="card">
-    <h3>Coffee & Beverages</h3>
-    Espresso <span class="price">₹120</span><br>
-    Cappuccino <span class="price">₹160</span><br>
-    Café Latte <span class="price">₹180</span><br>
-    Cold Coffee <span class="price">₹200</span>
-  </div>
-
-  <br>
-
-  <div class="card">
-    <h3>Cakes & Desserts</h3>
-    Chocolate Truffle Cake <span class="price">₹220</span><br>
-    Red Velvet Slice <span class="price">₹240</span><br>
-    Cheesecake <span class="price">₹260</span><br>
-    Brownie with Ice Cream <span class="price">₹210</span>
-  </div>
-
-  <br>
-
-  <div class="card">
-    <h3>Savoury</h3>
-    Grilled Sandwich <span class="price">₹180</span><br>
-    Garlic Bread <span class="price">₹150</span><br>
-    Pasta (White / Red Sauce) <span class="price">₹280</span>
+  <div class="grid">
+    <div class="card">
+      <img src="images/img-cakes-display.jpg" alt="Cakes display">
+      <p>Explore our range of vanilla, chocolate, red velvet & more.</p>
+      <a class="btn secondary" href="menu.html">View Cakes</a>
+    </div>
   </div>
 </section>
 
+<!-- GALLERY (Mum4) -->
+<section id="gallery">
+  <h2>Inside the Café</h2>
+  <p>A glimpse into our space, our people, and our service.</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="images/img-staff-serving.jpg" alt="Cafe staff serving">
+      <p>Warm service by a dedicated team</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT (Mum3) -->
 <section id="about">
   <h2>About the Café</h2>
   <p>
-    Thoughtfully brewed coffee, freshly baked desserts, and a calm space to unwind.
-    Crafted for comfort, quality, and everyday moments.
+    A thoughtfully designed café focused on fresh bakes, handcrafted coffee,
+    and a welcoming space for everyday moments.
   </p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="images/img-barista.jpg" alt="Barista preparing coffee">
+      <p>Led by a passionate team dedicated to quality and consistency.</p>
+    </div>
+  </div>
 </section>
 
-<section id="gallery">
-  <h2>Inside the Café</h2>
-  <p>Gallery images coming soon.</p>
-</section>
-
+<!-- LOCATION -->
 <section id="location">
   <h2>Visit Us</h2>
   <p>
-    Central Delhi, India<br>
+    Easily accessible café location<br>
     Open Daily: 10:00 AM – 11:00 PM
   </p>
+
+  <a class="btn" target="_blank"
+     href="https://maps.app.goo.gl/iBFF1RrKezFmrgfK6">
+     View Location on Google Maps
+  </a>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Get in Touch</h2>
   <p>
-    Call or WhatsApp us to place an order or ask about custom cakes.
+    Call or WhatsApp us for orders, reservations, or custom cake enquiries.
   </p>
-  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20would%20like%20to%20know%20more." class="btn secondary">WhatsApp</a>
-  <a href="tel:+91XXXXXXXXXX" class="btn">Call</a>
+
+  <a class="btn secondary"
+     href="https://wa.me/918076640767?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order.">
+    WhatsApp Order
+  </a>
+
+  <a class="btn" href="tel:+918076640767">Call Now</a>
 </section>
 
 <footer>
   © 2026 Café & Restaurant — Delhi, India
 </footer>
 
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20would%20like%20to%20order.">
+<a class="whatsapp-float"
+   href="https://wa.me/918076640767?text=Hi%2C%20I%20would%20like%20to%20order.">
   WhatsApp Order
 </a>
 
