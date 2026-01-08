@@ -1,85 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cakes | Café & Restaurant</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore our freshly baked cakes. Order directly on WhatsApp.">
+<meta charset="UTF-8">
+<title>Cakes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#faf9f7;color:#2a2a2a}
+section{max-width:1100px;margin:auto;padding:70px 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card{background:#fff;border:1px solid #eee;padding:20px;border-radius:6px}
+.card img{width:100%;border-radius:6px}
+.btn{background:#6b4f3f;color:#fff;padding:10px 18px;border-radius:4px;text-decoration:none;display:inline-block;margin-top:10px}
+.price{font-weight:bold;color:#6b4f3f}
+</style>
+</head>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #faf9f7;
-      color: #2a2a2a;
-      line-height: 1.6;
-    }
+<body>
 
-    header {
-      background: #ffffff;
-      padding: 18px 40px;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+<section>
+<h1>Our Cakes</h1>
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+<div class="grid">
+<div class="card">
+<img src="mum2.jpg">
+<h3>Vanilla Cake</h3>
+<p class="price">₹750</p>
+<a class="btn" href="https://wa.me/918076640767?text=Order%20Vanilla%20Cake">Order on WhatsApp</a>
+</div>
 
-    nav a {
-      margin-left: 22px;
-      text-decoration: none;
-      color: #2a2a2a;
-      font-size: 14px;
-    }
+<div class="card">
+<img src="mum2.jpg">
+<h3>Chocolate Cake</h3>
+<p class="price">₹850</p>
+<a class="btn" href="https://wa.me/918076640767?text=Order%20Chocolate%20Cake">Order on WhatsApp</a>
+</div>
+</div>
+</section>
 
-    section {
-      padding: 80px 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 40px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 22px;
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-
-    p {
-      margin: 0 0 10px 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      padding: 22px;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 14px;
-    }
-
-    .price {
-      font-weight: bold;
-      color: #6b4f3f;
-      margin-bottom: 10px
+</body>
+</html>
