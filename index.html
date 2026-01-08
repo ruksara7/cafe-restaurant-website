@@ -1,248 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Café & Restaurant</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium café & restaurant website with menu, gallery, WhatsApp ordering and location support.">
+<meta charset="UTF-8">
+<title>Café & Restaurant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #faf9f7;
-      color: #2a2a2a;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #ffffff;
-      padding: 18px 40px;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      margin-left: 22px;
-      text-decoration: none;
-      color: #2a2a2a;
-      font-size: 14px;
-    }
-
-    section {
-      padding: 80px 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 44px;
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-
-    h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      margin-right: 14px;
-      background: #2a2a2a;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-
-    .btn.secondary {
-      background: #6b4f3f;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 26px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid #eee;
-      border-radius: 6px;
-      padding: 24px;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 14px;
-    }
-
-    footer {
-      background: #ffffff;
-      border-top: 1px solid #eee;
-      padding: 40px;
-      font-size: 14px;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      background: #25D366;
-      color: #ffffff;
-      padding: 14px 20px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-  </style>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#faf9f7;color:#2a2a2a}
+header{background:#fff;padding:16px 40px;border-bottom:1px solid #eee;position:sticky;top:0}
+nav{display:flex;justify-content:space-between;align-items:center}
+nav a{text-decoration:none;margin-left:20px;color:#2a2a2a;font-size:14px}
+section{max-width:1200px;margin:auto;padding:70px 40px}
+h1{font-size:42px;margin-bottom:10px}
+h2{font-size:28px;margin-bottom:15px}
+.btn{background:#6b4f3f;color:#fff;padding:12px 22px;border-radius:4px;text-decoration:none;margin-right:10px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:30px}
+.card{background:#fff;border:1px solid #eee;border-radius:6px;padding:20px}
+.card img{width:100%;border-radius:6px}
+footer{background:#fff;border-top:1px solid #eee;padding:30px;text-align:center;font-size:14px}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 20px;border-radius:40px;text-decoration:none}
+</style>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <strong>Café & Restaurant</strong>
-    <div>
-      <a href="#home">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
-      <a href="#location">Location</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<nav>
+<strong>Café & Restaurant</strong>
+<div>
+<a href="#home">Home</a>
+<a href="menu.html">Menu</a>
+<a href="#gallery">Gallery</a>
+<a href="#location">Location</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 </header>
 
-<!-- HERO (Mum1) -->
 <section id="home">
-  <h1>Fresh Cakes & Coffee in the Heart of Delhi</h1>
-  <p>A warm café experience for handcrafted desserts, coffee, and calm conversations.</p>
-
-  <br>
-
-  <a class="btn secondary"
-     href="https://wa.me/918076640767?text=Hi%2C%20I%20would%20like%20to%20order%20from%20your%20cafe.">
-     Order on WhatsApp
-  </a>
-
-  <a class="btn" href="tel:+918076640767">Call Now</a>
-
-  <p><small>Dine-in • Takeaway • Custom Orders</small></p>
-
-  <br><br>
-
-  <img src="images/img-hero-coffee.jpg" alt="Cafe coffee ambience">
+<h1>Fresh Cakes & Coffee in the Heart of Delhi</h1>
+<p>A calm café experience with handcrafted desserts and premium coffee.</p>
+<br>
+<a class="btn" href="https://wa.me/918076640767">Order on WhatsApp</a>
+<a class="btn" href="tel:+918076640767">Call Now</a>
+<br><br>
+<img src="mum1.jpg" alt="Cafe ambience" style="width:100%;border-radius:8px">
 </section>
 
-<!-- OFFERINGS -->
 <section>
-  <h2>Our Offerings</h2>
-  <p>Thoughtfully prepared items, served fresh every day.</p>
-
-  <div class="grid">
-    <div class="card">Freshly Baked Cakes</div>
-    <div class="card">Coffee & Beverages</div>
-    <div class="card">Desserts & Pastries</div>
-    <div class="card">Savoury Snacks</div>
-    <div class="card">Custom Orders</div>
-    <div class="card">Dine-in & Takeaway</div>
-  </div>
+<h2>Our Offerings</h2>
+<div class="grid">
+<div class="card">Fresh Cakes</div>
+<div class="card">Coffee & Beverages</div>
+<div class="card">Desserts</div>
+<div class="card">Savoury Snacks</div>
+<div class="card">Custom Orders</div>
+<div class="card">Dine-in & Takeaway</div>
+</div>
 </section>
 
-<!-- CAKES HIGHLIGHT (Mum2) -->
-<section>
-  <h2>Signature Cakes</h2>
-  <p>Our most loved cakes, baked in-house and served fresh.</p>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/img-cakes-display.jpg" alt="Cakes display">
-      <p>Explore our range of vanilla, chocolate, red velvet & more.</p>
-      <a class="btn secondary" href="menu.html">View Cakes</a>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY (Mum4) -->
 <section id="gallery">
-  <h2>Inside the Café</h2>
-  <p>A glimpse into our space, our people, and our service.</p>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/img-staff-serving.jpg" alt="Cafe staff serving">
-      <p>Warm service by a dedicated team</p>
-    </div>
-  </div>
+<h2>Inside the Café</h2>
+<div class="grid">
+<div class="card"><img src="mum4.jpg"><p>Our team & service</p></div>
+<div class="card"><img src="mum3.jpg"><p>Quality coffee preparation</p></div>
+</div>
 </section>
 
-<!-- ABOUT (Mum3) -->
-<section id="about">
-  <h2>About the Café</h2>
-  <p>
-    A thoughtfully designed café focused on fresh bakes, handcrafted coffee,
-    and a welcoming space for everyday moments.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/img-barista.jpg" alt="Barista preparing coffee">
-      <p>Led by a passionate team dedicated to quality and consistency.</p>
-    </div>
-  </div>
-</section>
-
-<!-- LOCATION -->
 <section id="location">
-  <h2>Visit Us</h2>
-  <p>
-    Easily accessible café location<br>
-    Open Daily: 10:00 AM – 11:00 PM
-  </p>
-
-  <a class="btn" target="_blank"
-     href="https://maps.app.goo.gl/iBFF1RrKezFmrgfK6">
-     View Location on Google Maps
-  </a>
+<h2>Visit Us</h2>
+<p>Open Daily: 10 AM – 11 PM</p>
+<a class="btn" target="_blank" href="https://maps.app.goo.gl/iBFF1RrKezFmrgfK6">View on Google Maps</a>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-  <h2>Get in Touch</h2>
-  <p>
-    Call or WhatsApp us for orders, reservations, or custom cake enquiries.
-  </p>
-
-  <a class="btn secondary"
-     href="https://wa.me/918076640767?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order.">
-    WhatsApp Order
-  </a>
-
-  <a class="btn" href="tel:+918076640767">Call Now</a>
+<h2>Contact</h2>
+<a class="btn" href="https://wa.me/918076640767">WhatsApp</a>
+<a class="btn" href="tel:+918076640767">Call</a>
 </section>
 
-<footer>
-  © 2026 Café & Restaurant — Delhi, India
-</footer>
+<footer>© 2026 Café & Restaurant — Delhi</footer>
 
-<a class="whatsapp-float"
-   href="https://wa.me/918076640767?text=Hi%2C%20I%20would%20like%20to%20order.">
-  WhatsApp Order
-</a>
+<a class="whatsapp" href="https://wa.me/918076640767">WhatsApp Order</a>
 
 </body>
 </html>
