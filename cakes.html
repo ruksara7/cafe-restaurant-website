@@ -25,6 +25,7 @@ header{
   border-bottom:1px solid #eee;
   position:sticky;
   top:0;
+  z-index:100;
 }
 
 nav{
@@ -46,10 +47,7 @@ section{
   padding:80px 30px;
 }
 
-h1{
-  font-size:36px;
-  margin-bottom:10px;
-}
+h1{font-size:36px;margin-bottom:10px}
 
 .subtitle{
   opacity:.75;
@@ -63,51 +61,17 @@ h1{
   margin:18px 0 40px;
 }
 
-.header-image{
-  width:100%;
-  border-radius:8px;
-  margin-bottom:40px;
-}
-
 .menu-item{
   display:flex;
   justify-content:space-between;
-  align-items:flex-start;
   border-bottom:1px dashed #ddd;
   padding:14px 0;
 }
 
-.menu-item:last-child{
-  border-bottom:none;
-}
-
-.item-name{
-  font-weight:600;
-}
-
-.item-desc{
-  font-size:13px;
-  opacity:.75;
-  margin-top:4px;
-}
-
-.price{
-  font-weight:600;
-  color:var(--accent);
-  white-space:nowrap;
-}
-
-.order{
-  font-size:13px;
-  margin-top:6px;
-  display:inline-block;
-  color:var(--accent);
-  text-decoration:none;
-}
-
-.order:hover{
-  text-decoration:underline;
-}
+.item-name{font-weight:600}
+.item-desc{font-size:13px;opacity:.75;margin-top:4px}
+.price{font-weight:600;color:var(--accent)}
+.order{font-size:13px;margin-top:6px;display:inline-block;color:var(--accent)}
 
 .whatsapp{
   position:fixed;
@@ -118,6 +82,17 @@ h1{
   padding:14px 20px;
   border-radius:40px;
   text-decoration:none;
+  z-index:999;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+  header{padding:12px 16px}
+  nav{flex-direction:column;gap:8px}
+  nav a{margin:0 10px;font-size:15px}
+  section{padding:50px 16px}
+  h1{font-size:28px}
+  .menu-item{flex-direction:column;gap:6px}
 }
 </style>
 </head>
@@ -129,32 +104,21 @@ h1{
 <strong>Café & Restaurant</strong>
 <div>
 <a href="index.html">Home</a>
-<a href="menu.html">Menu</a>
-<a href="index.html#contact">Contact</a>
+<a href="coffee.html">Coffee</a>
 </div>
 </nav>
 </header>
 
 <section>
 <h1>Cakes</h1>
-<p class="subtitle">
-Freshly baked · Custom orders available
-</p>
-
+<p class="subtitle">Freshly baked · Custom orders available</p>
 <div class="divider"></div>
 
-<!-- CATEGORY HEADER IMAGE (ONLY IMAGE ON PAGE) -->
-<img src="mum5.png" alt="Cakes selection" class="header-image">
-
-<!-- CAKE LIST -->
 <div class="menu-item">
   <div>
     <div class="item-name">Classic Vanilla Cake</div>
-    <div class="item-desc">Soft sponge with light cream frosting</div>
-    <a class="order"
-       href="https://wa.me/918076640767?text=Order%20Classic%20Vanilla%20Cake">
-       Order on WhatsApp
-    </a>
+    <div class="item-desc">Soft sponge with cream frosting</div>
+    <a class="order" href="https://wa.me/918076640767">Order on WhatsApp</a>
   </div>
   <div class="price">₹750 / ½ kg</div>
 </div>
@@ -162,44 +126,14 @@ Freshly baked · Custom orders available
 <div class="menu-item">
   <div>
     <div class="item-name">Chocolate Truffle Cake</div>
-    <div class="item-desc">Rich chocolate layers with ganache</div>
-    <a class="order"
-       href="https://wa.me/918076640767?text=Order%20Chocolate%20Truffle%20Cake">
-       Order on WhatsApp
-    </a>
+    <div class="item-desc">Rich chocolate ganache</div>
+    <a class="order" href="https://wa.me/918076640767">Order on WhatsApp</a>
   </div>
   <div class="price">₹850 / ½ kg</div>
 </div>
-
-<div class="menu-item">
-  <div>
-    <div class="item-name">Red Velvet Cake</div>
-    <div class="item-desc">Cream cheese frosting</div>
-    <a class="order"
-       href="https://wa.me/918076640767?text=Order%20Red%20Velvet%20Cake">
-       Order on WhatsApp
-    </a>
-  </div>
-  <div class="price">₹900 / ½ kg</div>
-</div>
-
-<div class="menu-item">
-  <div>
-    <div class="item-name">Custom Celebration Cake</div>
-    <div class="item-desc">Design, flavour & size as per request</div>
-    <a class="order"
-       href="https://wa.me/918076640767?text=Order%20Custom%20Celebration%20Cake">
-       Enquire on WhatsApp
-    </a>
-  </div>
-  <div class="price">Price on request</div>
-</div>
-
 </section>
 
-<a class="whatsapp" href="https://wa.me/918076640767">
-WhatsApp Order
-</a>
+<a class="whatsapp" href="https://wa.me/918076640767">WhatsApp Order</a>
 
 </body>
 </html>
