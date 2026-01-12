@@ -64,7 +64,7 @@ nav a{
 
 /* CONTENT */
 section{
-  max-width:900px;
+  max-width:1050px;
   margin:auto;
   padding:80px 30px;
 }
@@ -77,6 +77,12 @@ h1{
 .subtitle{
   opacity:.75;
   font-size:18px;
+  margin-bottom:10px;
+}
+
+.note{
+  font-size:14px;
+  opacity:.7;
   margin-bottom:30px;
 }
 
@@ -89,7 +95,6 @@ h1{
 
 .header-image{
   width:100%;
-  height:auto;
   border-radius:12px;
   margin-bottom:40px;
 }
@@ -105,8 +110,10 @@ h1{
 .menu-item{
   display:flex;
   justify-content:space-between;
+  align-items:flex-start;
   border-bottom:1px dashed #ddd;
   padding:24px 0;
+  gap:20px;
 }
 
 .item-name{
@@ -124,6 +131,7 @@ h1{
   font-weight:700;
   color:var(--accent);
   font-size:24px;
+  white-space:nowrap;
 }
 
 .order{
@@ -154,7 +162,7 @@ h1{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:18px;
+  font-size:20px;
   text-decoration:none;
   z-index:999;
 }
@@ -182,15 +190,9 @@ h1{
   section{padding:60px 16px;}
   h1{font-size:32px;}
 
-  .header-image{
-    height:220px;
-    object-fit:cover;
-  }
-
   .menu-item{
     flex-direction:column;
     text-align:center;
-    gap:16px;
   }
 
   .price{font-size:28px;}
@@ -215,6 +217,7 @@ h1{
 <section>
 <h1>☕ Coffee Menu</h1>
 <p class="subtitle">Freshly brewed daily · Hot & cold selections</p>
+<p class="note">Arabica beans • Strong to mild • Takeaway available</p>
 <div class="divider"></div>
 
 <img src="mum6.png" alt="Fresh coffee" class="header-image">
@@ -225,16 +228,16 @@ h1{
   <div>
     <div class="item-name">Espresso</div>
     <div class="item-desc">Strong single shot, rich & bold</div>
-    <a class="order" href="https://wa.me/919821504642?text=Order%20Espresso">Order on WhatsApp</a>
+    <a class="order" href="https://wa.me/919821504642?text=I%20want%20to%20order%20Espresso">📲 Order This Coffee</a>
   </div>
   <div class="price">₹150</div>
 </div>
 
 <div class="menu-item">
   <div>
-    <div class="item-name">Cappuccino</div>
+    <div class="item-name">Cappuccino ⭐ Bestseller</div>
     <div class="item-desc">Espresso with steamed milk & foam</div>
-    <a class="order" href="https://wa.me/919821504642?text=Order%20Cappuccino">Order on WhatsApp</a>
+    <a class="order" href="https://wa.me/919821504642?text=I%20want%20to%20order%20Cappuccino">📲 Order This Coffee</a>
   </div>
   <div class="price">₹180</div>
 </div>
@@ -243,7 +246,7 @@ h1{
   <div>
     <div class="item-name">Caffè Latte</div>
     <div class="item-desc">Smooth espresso with hot milk</div>
-    <a class="order" href="https://wa.me/919821504642?text=Order%20Latte">Order on WhatsApp</a>
+    <a class="order" href="https://wa.me/919821504642?text=I%20want%20to%20order%20Caffe%20Latte">📲 Order This Coffee</a>
   </div>
   <div class="price">₹190</div>
 </div>
@@ -253,8 +256,8 @@ h1{
 <div class="menu-item">
   <div>
     <div class="item-name">Cold Coffee</div>
-    <div class="item-desc">Chilled & refreshing</div>
-    <a class="order" href="https://wa.me/919821504642?text=Order%20Cold%20Coffee">Order on WhatsApp</a>
+    <div class="item-desc">Chilled, creamy & refreshing</div>
+    <a class="order" href="https://wa.me/919821504642?text=I%20want%20to%20order%20Cold%20Coffee">📲 Order This Coffee</a>
   </div>
   <div class="price">₹200</div>
 </div>
@@ -263,7 +266,7 @@ h1{
   <div>
     <div class="item-name">Iced Caramel Coffee</div>
     <div class="item-desc">Cold brew with caramel notes</div>
-    <a class="order" href="https://wa.me/919821504642?text=Order%20Iced%20Caramel%20Coffee">Order on WhatsApp</a>
+    <a class="order" href="https://wa.me/919821504642?text=I%20want%20to%20order%20Iced%20Caramel%20Coffee">📲 Order This Coffee</a>
   </div>
   <div class="price">₹220</div>
 </div>
@@ -276,10 +279,8 @@ h1{
 function toggleMenu(){
   document.getElementById('nav-menu').classList.toggle('active');
 }
-document.querySelectorAll('nav a').forEach(link=>{
-  link.addEventListener('click',()=>{
-    document.getElementById('nav-menu').classList.remove('active');
-  });
+document.querySelectorAll('#nav-menu a').forEach(link=>{
+  link.onclick=()=>document.getElementById('nav-menu').classList.remove('active');
 });
 </script>
 
