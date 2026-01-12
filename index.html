@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
 <meta charset="UTF-8">
-<title>Café & Restaurant</title>
+<title>Café & Restaurant – Gallery</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://wa.me">
 
@@ -13,10 +13,8 @@
   --accent:#8b4a3c;
 }
 
-/* SAFE RESET */
-*, *::before, *::after{
-  box-sizing:border-box;
-}
+/* RESET */
+*, *::before, *::after{box-sizing:border-box;}
 
 body{
   margin:0;
@@ -60,117 +58,100 @@ nav a{
   cursor:pointer;
 }
 
-/* NAV MENU */
 #nav-menu{
   display:flex;
   gap:10px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
-  max-width:1200px;
+  max-width:1000px;
   margin:auto;
-  padding:80px 40px;
+  padding:80px 30px;
 }
 
 h1{
-  font-size:44px;
-  margin-bottom:12px;
-  line-height:1.2;
+  font-size:40px;
+  margin-bottom:10px;
 }
 
-h2{
-  font-size:30px;
-  margin-bottom:12px;
+.subtitle{
+  opacity:.75;
+  font-size:18px;
+  margin-bottom:30px;
 }
-
-.highlight{color:var(--accent);}
 
 .divider{
   width:60px;
   height:3px;
   background:var(--accent);
-  margin:18px 0;
+  margin-bottom:40px;
 }
 
-.subtitle{
-  max-width:650px;
-  opacity:.85;
-  font-size:18px;
+/* HERO IMAGE */
+.header-image{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:40px;
 }
 
-/* BUTTONS */
-.btn{
-  background:var(--accent);
-  color:#fff;
-  padding:12px 22px;
-  border-radius:6px;
-  text-decoration:none;
-  margin-right:10px;
-  font-size:14px;
-  display:inline-block;
-}
-
-.btn:hover{opacity:.9}
-
-/* GRID */
-.grid{
+/* GALLERY */
+.gallery-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:26px;
-  margin-top:40px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
 }
 
-.card{
-  background:#fff;
-  border:1px solid #eee;
-  border-radius:6px;
-  padding:20px;
-  text-align:center;
+.gallery-item{position:relative;}
+
+.gallery-image{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:12px;
 }
 
-/* IMAGES — SAFE FOR PC */
-img{
-  max-width:100%;
-  height:auto;
+.gallery-caption{
+  position:absolute;
+  bottom:14px;
+  left:14px;
+  right:14px;
+  background:rgba(0,0,0,.8);
+  color:#fff;
+  padding:10px 14px;
   border-radius:8px;
-}
-
-/* MAP */
-.map-container{
-  height:350px;
-  border-radius:8px;
-  overflow:hidden;
-  margin:20px 0;
-}
-
-/* FOOTER */
-footer{
-  background:#fff;
-  border-top:1px solid #eee;
-  padding:30px;
-  text-align:center;
   font-size:14px;
+  opacity:0;
+  transition:.3s;
+}
+
+.gallery-item:hover .gallery-caption{
+  opacity:1;
 }
 
 /* WHATSAPP FLOAT */
 .whatsapp{
   position:fixed;
-  bottom:20px;
-  right:20px;
+  bottom:24px;
+  right:24px;
   background:#25D366;
   color:#fff;
-  padding:14px 20px;
-  border-radius:40px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-decoration:none;
-  font-weight:500;
+  font-size:22px;
   z-index:999;
 }
 
-/* ========== MOBILE ONLY ========== */
-@media (max-width:768px){
-
+/* MOBILE */
+@media(max-width:768px){
   header{padding:12px 16px;}
+  section{padding:60px 16px;}
+  h1{font-size:30px;}
 
   .menu-toggle{display:block;}
 
@@ -189,34 +170,7 @@ footer{
 
   #nav-menu.active{display:flex;}
 
-  nav a{
-    font-size:16px;
-    padding:14px;
-  }
-
-  section{padding:50px 16px;}
-
-  h1{font-size:28px;}
-  h2{font-size:22px;}
-
-  .btn{
-    padding:15px 24px;
-    font-size:16px;
-    display:block;
-    margin:8px auto;
-    text-align:center;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .map-container{height:280px;}
-
-  .whatsapp{
-    bottom:16px;
-    right:16px;
-  }
+  .gallery-image{height:220px;}
 }
 </style>
 </head>
@@ -225,77 +179,67 @@ footer{
 
 <header>
 <nav>
-<strong style="font-size:18px">Café & Restaurant</strong>
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
-<div id="nav-menu">
-  <a href="#home">🏠 Home</a>
-  <a href="cakes.html">🍰 Cakes</a>
-  <a href="coffee.html">☕ Coffee</a>
-  <a href="#location">📍 Location</a>
-  <a href="#contact">📞 Contact</a>
-</div>
+  <strong style="font-size:20px">Café & Restaurant</strong>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <div id="nav-menu">
+    <a href="index.html">🏠 Home</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="cakes.html">🍰 Cakes</a>
+    <a href="coffee.html">☕ Coffee</a>
+  </div>
 </nav>
 </header>
 
-<section id="home">
-<h1>Fresh Cakes & Coffee in the <span class="highlight">Heart of Delhi</span></h1>
-<div class="divider"></div>
-<p class="subtitle">A calm café experience where people gather, relax, and enjoy handcrafted food.</p>
-<br>
-<a class="btn" href="https://wa.me/919821504642">Order on WhatsApp</a>
-<a class="btn" href="tel:+919821504642">Call Now</a>
-<br><br>
-<img src="mum2.png" alt="Cafe interior">
-</section>
-
 <section>
-<h2>Our Offerings</h2>
+<h1>🖼️ Gallery</h1>
+<p class="subtitle">Fresh moments from our café · Delhi</p>
 <div class="divider"></div>
-<div class="grid">
-  <div class="card"><strong>🍰 Fresh Cakes</strong><br>Custom orders welcome</div>
-  <div class="card"><strong>☕ Coffee & Beverages</strong><br>Hot & cold brewed daily</div>
-  <div class="card"><strong>🍮 Desserts</strong><br>Handcrafted treats</div>
-  <div class="card"><strong>🥪 Savoury Snacks</strong><br>Quick bites ready</div>
-  <div class="card"><strong>🎂 Custom Orders</strong><br>Special occasions</div>
-  <div class="card"><strong>🍽️ Dine-in & Takeaway</strong><br>Both available</div>
+
+<img src="mum2.png" alt="Cafe exterior" class="header-image" loading="lazy">
+
+<div class="gallery-grid">
+
+  <div class="gallery-item">
+    <img src="mum3.png" class="gallery-image" loading="lazy">
+    <div class="gallery-caption">Coffee crafted with care</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="mum4.png" class="gallery-image" loading="lazy">
+    <div class="gallery-caption">Our friendly team</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="mum5.png" class="gallery-image" loading="lazy">
+    <div class="gallery-caption">Cozy café interior</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="mum6.png" class="gallery-image" loading="lazy">
+    <div class="gallery-caption">Fresh daily bakes</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="mum7.png" class="gallery-image" loading="lazy">
+    <div class="gallery-caption">Refreshing beverages</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="mum8.png" class="gallery-image" loading="lazy">
+    <div class="gallery-caption">Perfect dining setup</div>
+  </div>
+
 </div>
 </section>
 
-<section id="location">
-<h2>📍 Visit Us</h2>
-<div class="divider"></div>
-<p>Open Daily · 10 AM – 11 PM</p>
-<div class="map-container">
-  <!-- ORIGINAL LOCATION EMBED (restored) -->
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.482704575!2d77.20902131525814!3d28.6139399824259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUyLjQiTiA3N8KwMTIuanUnNDguNSJF!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin"
-    width="100%"
-    height="100%"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-</section>
-
-<section id="contact">
-<h2>📞 Contact</h2>
-<div class="divider"></div>
-<a class="btn" href="https://wa.me/919821504642">WhatsApp Order</a>
-<a class="btn" href="tel:+919821504642">Call Now</a>
-</section>
-
-<footer>© 2026 Café & Restaurant — Delhi</footer>
-
-<a class="whatsapp" href="https://wa.me/919821504642">📱 WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/919821504642">📱</a>
 
 <script>
 function toggleMenu(){
   document.getElementById('nav-menu').classList.toggle('active');
 }
-document.querySelectorAll('nav a').forEach(link=>{
-  link.addEventListener('click',()=>document.getElementById('nav-menu').classList.remove('active'));
+document.querySelectorAll('#nav-menu a').forEach(link=>{
+  link.onclick=()=>document.getElementById('nav-menu').classList.remove('active');
 });
 </script>
 
