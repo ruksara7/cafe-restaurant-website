@@ -4,292 +4,121 @@
 <meta charset="UTF-8">
 <title>Cakes - Café & Restaurant</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- SPEED BOOST -->
-<link rel="dns-prefetch" href="//wa.me">
 <link rel="preconnect" href="https://wa.me">
-
 <style>
-:root{
-  --bg:#faf7f3;
-  --text:#2a2a2a;
-  --accent:#8b4a3c;
-}
-
-* {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.5;
-}
-
-header{
-  background:#fff;
-  padding:16px 40px;
-  border-bottom:1px solid #eee;
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  max-width:900px;
-  margin:auto;
-}
-
-nav a{
-  text-decoration:none;
-  margin-left:20px;
-  color:var(--text);
-  font-size:14px;
-  font-weight:500;
-}
-
-section{
-  max-width:900px;
-  margin:auto;
-  padding:80px 30px;
-}
-
-h1{
-  font-size:36px;
-  margin-bottom:10px;
-  line-height:1.2;
-}
-
-.subtitle{
-  opacity:.75;
-  margin-bottom:30px;
-  font-size:18px;
-}
-
-.divider{
-  width:60px;
-  height:3px;
-  background:var(--accent);
-  margin:18px 0 40px;
-}
-
-.header-image{
-  width:100%;
-  border-radius:8px;
-  margin-bottom:40px;
-  height:250px;
-  object-fit:cover;
-}
-
-.menu-item{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  border-bottom:1px dashed #ddd;
-  padding:20px 0;
-}
-
-.menu-item:last-child{
-  border-bottom:none;
-}
-
-.item-name{
-  font-weight:600;
-  font-size:18px;
-  margin-bottom:4px;
-}
-
-.item-desc{
-  font-size:14px;
-  opacity:.75;
-  margin-bottom:8px;
-  line-height:1.4;
-}
-
-.price{
-  font-weight:600;
-  color:var(--accent);
-  font-size:20px;
-  white-space:nowrap;
-}
-
-.order{
-  font-size:14px;
-  margin-top:8px;
-  display:inline-block;
-  color:var(--accent);
-  text-decoration:none;
-  padding:8px 16px;
-  border:1px solid var(--accent);
-  border-radius:6px;
-  font-weight:500;
-  transition: all 0.2s;
-}
-
-.order:hover{
-  background:var(--accent);
-  color:#fff;
-}
-
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:14px 20px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:500;
-  z-index:999;
-  box-shadow:0 4px 12px rgba(37,211,102,0.4);
-}
-
-/* SPEED OPTIMIZATION */
-img { 
-  content-visibility: auto; 
-  contain-intrinsic-size: 300px 250px;
-  loading: lazy;
-}
-
-/* ===== MOBILE PERFECT ===== */
+:root{--bg:#faf7f3;--text:#2a2a2a;--accent:#8b4a3c;}
+* {max-width: 100%;box-sizing: border-box;}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;}
+header{background:#fff;padding:16px 40px;border-bottom:1px solid #eee;position:sticky;top:0;z-index:100;}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto;}
+nav a{text-decoration:none;color:var(--text);font-size:14px;font-weight:500;padding:8px 12px;display:block;}
+.menu-toggle{display:none;background:none;border:none;font-size:24px;color:var(--text);cursor:pointer;}
+#nav-menu{display:flex;gap:10px;}
+section{max-width:900px;margin:auto;padding:80px 30px;}
+h1{font-size:42px;margin-bottom:10px;line-height:1.2;}
+.subtitle{opacity:.75;margin-bottom:30px;font-size:18px;}
+.divider{width:60px;height:3px;background:var(--accent);margin:18px 0 40px;}
+.header-image{width:100%;border-radius:12px;margin-bottom:40px;height:280px;object-fit:cover;}
+.section-title{font-size:24px;color:var(--accent);margin:40px 0 24px;font-weight:600;}
+.menu-item{display:flex;justify-content:space-between;border-bottom:1px dashed #ddd;padding:24px 0;}
+.item-name{font-weight:600;font-size:20px;margin-bottom:6px;}
+.item-desc{font-size:15px;opacity:.8;margin-bottom:12px;line-height:1.5;}
+.price{font-weight:700;color:var(--accent);font-size:24px;}
+.order{display:inline-block;color:var(--accent);text-decoration:none;padding:12px 24px;border:2px solid var(--accent);border-radius:8px;font-weight:600;font-size:15px;transition:all 0.3s;margin-top:8px;}
+.order:hover{background:var(--accent);color:#fff;transform:translateY(-2px);}
+.whatsapp{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;padding:20px 24px;border-radius:50px;text-decoration:none;font-weight:600;font-size:16px;z-index:999;box-shadow:0 8px 32px rgba(37,211,102,0.4);width:60px;height:60px;display:flex;align-items:center;justify-content:center;}
+img{width:100%;height:auto;border-radius:8px;content-visibility:auto;contain-intrinsic-size:300px 250px;loading:lazy;}
 @media (max-width:768px){
-  header{padding:12px 16px}
-  
-  nav{
-    flex-direction:column;
-    gap:12px;
-  }
-  
-  nav a{
-    margin:0 8px;
-    font-size:16px;
-    padding:8px 12px;
-  }
-  
-  section{
-    padding:50px 16px;
-  }
-  
-  h1{font-size:28px}
-  .subtitle{font-size:16px}
-  
-  .header-image{
-    height:200px;
-  }
-  
-  .menu-item{
-    flex-direction:column;
-    gap:12px;
-    padding:24px 0;
-  }
-  
-  .price{
-    margin-top:8px;
-    font-size:22px;
-  }
-  
-  .order{
-    padding:12px 20px;
-    font-size:16px;
-    min-height:44px;
-  }
-  
-  .whatsapp{
-    bottom:16px;
-    right:16px;
-    padding:16px 20px;
-    font-size:16px;
-  }
+  .menu-toggle{display:block;}
+  #nav-menu{display:none;flex-direction:column;position:absolute;top:100%;left:12px;right:12px;background:#fff;padding:24px;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.2);margin-top:8px;}
+  #nav-menu.active{display:flex;}
+  nav a{padding:16px 20px;border-radius:8px;font-size:16px;}
+  header{padding:12px 16px;}
+  section{padding:60px 16px;}
+  h1{font-size:32px;}
+  .header-image{height:220px;}
+  .section-title{font-size:22px;margin:30px 0 20px;}
+  .menu-item{flex-direction:column;gap:16px;padding:28px 0;text-align:center;}
+  .price{font-size:28px;margin-top:8px;}
+  .order{padding:16px 28px;font-size:17px;}
+  .whatsapp{bottom:20px;right:20px;width:56px;height:56px;padding:16px;}
 }
-
-@media (max-width:360px){
-  h1{font-size:24px}
-  section{padding:40px 12px}
-}
+@media (max-width:360px){h1{font-size:28px;section{padding:50px 12px;}}
 </style>
 </head>
-
 <body>
-
 <header>
 <nav>
-<strong style="font-size:18px">Café & Restaurant</strong>
-<div>
+<strong style="font-size:20px">Café & Restaurant</strong>
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<div id="nav-menu">
 <a href="index.html">🏠 Home</a>
+<a href="gallery.html">🖼️ Gallery</a>
+<a href="cakes.html">🍰 Cakes</a>
 <a href="coffee.html">☕ Coffee</a>
 </div>
 </nav>
 </header>
-
 <section>
-<h1>Cakes</h1>
-<p class="subtitle">
-Freshly baked daily · Custom orders welcome
-</p>
-
+<h1>🍰 Cake Menu</h1>
+<p class="subtitle">Fresh baked daily in Delhi · Custom orders welcome</p>
 <div class="divider"></div>
-
-<!-- HEADER CAKE IMAGE -->
-<img src="mum5.png" alt="Fresh cakes" class="header-image">
-
-<!-- CAKE MENU -->
+<img src="mum6.png" alt="Fresh cakes" class="header-image">
+<div class="section-title">🎂 Classic Cakes</div>
 <div class="menu-item">
   <div>
-    <div class="item-name">Classic Vanilla Cake</div>
-    <div class="item-desc">Soft sponge cake with light vanilla cream frosting. Perfect for any celebration.</div>
-    <a class="order" href="https://wa.me/919821504642?text=Hi!%20I%20want%20to%20order%20Classic%20Vanilla%20Cake">
-      Order on WhatsApp
-    </a>
+    <div class="item-name">Chocolate Mud Cake</div>
+    <div class="item-desc">Rich moist chocolate cake with ganache frosting</div>
+    <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Chocolate%20Mud%20Cake%20(₹155)">Order Now</a>
   </div>
-  <div class="price">₹750 / ½ kg</div>
+  <div class="price">₹155</div>
 </div>
-
 <div class="menu-item">
   <div>
-    <div class="item-name">Chocolate Truffle Cake</div>
-    <div class="item-desc">Rich chocolate layers with silky ganache frosting. Our bestseller!</div>
-    <a class="order" href="https://wa.me/919821504642?text=Hi!%20I%20want%20to%20order%20Chocolate%20Truffle%20Cake">
-      Order on WhatsApp
-    </a>
+    <div class="item-name">Vanilla Sponge</div>
+    <div class="item-desc">Light fluffy vanilla cake with buttercream</div>
+    <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Vanilla%20Sponge%20(₹145)">Order Now</a>
   </div>
-  <div class="price">₹850 / ½ kg</div>
+  <div class="price">₹145</div>
 </div>
-
 <div class="menu-item">
   <div>
-    <div class="item-name">Red Velvet Cake</div>
-    <div class="item-desc">Velvety red sponge with classic cream cheese frosting. Crowd favorite.</div>
-    <a class="order" href="https://wa.me/919821504642?text=Hi!%20I%20want%20to%20order%20Red%20Velvet%20Cake">
-      Order on WhatsApp
-    </a>
+    <div class="item-name">Red Velvet</div>
+    <div class="item-desc">Velvety cocoa cake with cream cheese frosting</div>
+    <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Red%20Velvet%20(₹175)">Order Now</a>
   </div>
-  <div class="price">₹900 / ½ kg</div>
+  <div class="price">₹175</div>
 </div>
-
+<div class="section-title">🌟 Premium Cakes</div>
 <div class="menu-item">
   <div>
-    <div class="item-name">Custom Celebration Cake</div>
-    <div class="item-desc">Personalized design, flavor & size. Birthdays, anniversaries, events.</div>
-    <a class="order" href="https://wa.me/919821504642?text=Hi!%20I%20need%20a%20Custom%20Celebration%20Cake">
-      Enquire Now
-    </a>
+    <div class="item-name">Tiramisu</div>
+    <div class="item-desc">Classic Italian coffee mascarpone delight</div>
+    <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Tiramisu%20(₹185)">Order Now</a>
   </div>
-  <div class="price">Price on request</div>
+  <div class="price">₹185</div>
 </div>
-
+<div class="menu-item">
+  <div>
+    <div class="item-name">Black Forest</div>
+    <div class="item-desc">Chocolate layers with cherries & whipped cream</div>
+    <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Black%20Forest%20(₹195)">Order Now</a>
+  </div>
+  <div class="price">₹195</div>
+</div>
+<div class="menu-item">
+  <div>
+    <div class="item-name">Pineapple Pastry</div>
+    <div class="item-desc">Fresh pineapple sponge cake with cream</div>
+    <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Pineapple%20Pastry%20(₹165)">Order Now</a>
+  </div>
+  <div class="price">₹165</div>
+</div>
 </section>
-
-<!-- ANONYMOUS WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/919821504642?text=Cake%20Order%20-%20Ready%20to%20order!">
-📦 Order Cake
-</a>
-
+<a class="whatsapp" href="https://wa.me/919821504642?text=Cake%20Order!">🍰</a>
+<script>
+function toggleMenu(){document.getElementById('nav-menu').classList.toggle('active');}
+document.querySelectorAll('nav a').forEach(link=>link.addEventListener('click',()=>document.getElementById('nav-menu').classList.remove('active')));
+</script>
 </body>
 </html>
