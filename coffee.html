@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Coffee & Beverages</title>
+<title>Coffee - Café & Restaurant</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SPEED BOOST -->
+<link rel="dns-prefetch" href="//wa.me">
+<link rel="preconnect" href="https://wa.me">
 
 <style>
 :root{
@@ -12,11 +16,17 @@
   --accent:#8b4a3c;
 }
 
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
   background:var(--bg);
   color:var(--text);
+  line-height:1.5;
 }
 
 header{
@@ -25,12 +35,15 @@ header{
   border-bottom:1px solid #eee;
   position:sticky;
   top:0;
+  z-index:100;
 }
 
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  max-width:900px;
+  margin:auto;
 }
 
 nav a{
@@ -38,6 +51,7 @@ nav a{
   margin-left:20px;
   color:var(--text);
   font-size:14px;
+  font-weight:500;
 }
 
 section{
@@ -46,21 +60,93 @@ section{
   padding:80px 30px;
 }
 
-h1{font-size:36px;margin-bottom:10px}
-.subtitle{opacity:.75;margin-bottom:40px}
-.divider{width:60px;height:3px;background:var(--accent);margin:18px 0 40px}
+h1{
+  font-size:36px;
+  margin-bottom:10px;
+  line-height:1.2;
+}
+
+.subtitle{
+  opacity:.75;
+  margin-bottom:30px;
+  font-size:18px;
+}
+
+.divider{
+  width:60px;
+  height:3px;
+  background:var(--accent);
+  margin:18px 0 40px;
+}
+
+.header-image{
+  width:100%;
+  border-radius:8px;
+  margin-bottom:40px;
+  height:250px;
+  object-fit:cover;
+}
+
+.menu-section{
+  margin-bottom:50px;
+}
+
+.section-title{
+  font-size:22px;
+  color:var(--accent);
+  margin:30px 0 20px;
+  font-weight:600;
+}
 
 .menu-item{
   display:flex;
   justify-content:space-between;
+  align-items:flex-start;
   border-bottom:1px dashed #ddd;
-  padding:14px 0;
+  padding:20px 0;
 }
 
-.item-name{font-weight:600}
-.item-desc{font-size:13px;opacity:.75;margin-top:4px}
-.price{font-weight:600;color:var(--accent)}
-.order{font-size:13px;margin-top:6px;display:inline-block;color:var(--accent)}
+.menu-item:last-child{
+  border-bottom:none;
+}
+
+.item-name{
+  font-weight:600;
+  font-size:18px;
+  margin-bottom:4px;
+}
+
+.item-desc{
+  font-size:14px;
+  opacity:.75;
+  margin-bottom:8px;
+  line-height:1.4;
+}
+
+.price{
+  font-weight:600;
+  color:var(--accent);
+  font-size:20px;
+  white-space:nowrap;
+}
+
+.order{
+  font-size:14px;
+  margin-top:8px;
+  display:inline-block;
+  color:var(--accent);
+  text-decoration:none;
+  padding:8px 16px;
+  border:1px solid var(--accent);
+  border-radius:6px;
+  font-weight:500;
+  transition: all 0.2s;
+}
+
+.order:hover{
+  background:var(--accent);
+  color:#fff;
+}
 
 .whatsapp{
   position:fixed;
@@ -70,16 +156,75 @@ h1{font-size:36px;margin-bottom:10px}
   color:#fff;
   padding:14px 20px;
   border-radius:40px;
+  text-decoration:none;
+  font-weight:500;
+  z-index:999;
+  box-shadow:0 4px 12px rgba(37,211,102,0.4);
 }
 
-/* MOBILE */
+/* SPEED OPTIMIZATION */
+img { 
+  content-visibility: auto; 
+  contain-intrinsic-size: 300px 250px;
+  loading: lazy;
+}
+
+/* ===== MOBILE PERFECT ===== */
 @media (max-width:768px){
   header{padding:12px 16px}
-  nav{flex-direction:column;gap:8px}
-  nav a{margin:0 10px;font-size:15px}
-  section{padding:50px 16px}
+  
+  nav{
+    flex-direction:column;
+    gap:12px;
+  }
+  
+  nav a{
+    margin:0 8px;
+    font-size:16px;
+    padding:8px 12px;
+  }
+  
+  section{
+    padding:50px 16px;
+  }
+  
   h1{font-size:28px}
-  .menu-item{flex-direction:column;gap:6px}
+  .subtitle{font-size:16px}
+  
+  .header-image{
+    height:200px;
+  }
+  
+  .menu-item{
+    flex-direction:column;
+    gap:12px;
+    padding:24px 0;
+  }
+  
+  .price{
+    margin-top:8px;
+    font-size:22px;
+  }
+  
+  .order{
+    padding:12px 20px;
+    font-size:16px;
+    min-height:44px;
+  }
+  
+  .whatsapp{
+    bottom:16px;
+    right:16px;
+    padding:16px 20px;
+    font-size:16px;
+  }
+  
+  .section-title{font-size:20px}
+}
+
+@media (max-width:360px){
+  h1{font-size:24px}
+  section{padding:40px 12px}
 }
 </style>
 </head>
@@ -88,39 +233,96 @@ h1{font-size:36px;margin-bottom:10px}
 
 <header>
 <nav>
-<strong>Café & Restaurant</strong>
+<strong style="font-size:18px">Café & Restaurant</strong>
 <div>
-<a href="index.html">Home</a>
-<a href="cakes.html">Cakes</a>
+<a href="index.html">🏠 Home</a>
+<a href="cakes.html">🍰 Cakes</a>
 </div>
 </nav>
 </header>
 
 <section>
 <h1>Coffee & Beverages</h1>
-<p class="subtitle">Carefully brewed · Hot & Cold</p>
+<p class="subtitle">
+Carefully brewed fresh daily · Hot & cold selections
+</p>
+
 <div class="divider"></div>
 
-<div class="menu-item">
-  <div>
-    <div class="item-name">Espresso</div>
-    <div class="item-desc">Strong single shot</div>
-    <a class="order" href="https://wa.me/918076640767">Order on WhatsApp</a>
+<!-- HEADER COFFEE IMAGE -->
+<img src="mum6.png" alt="Fresh coffee" class="header-image">
+
+<!-- HOT COFFEE -->
+<div class="menu-section">
+  <div class="section-title">🔥 Hot Coffee</div>
+  
+  <div class="menu-item">
+    <div>
+      <div class="item-name">Espresso</div>
+      <div class="item-desc">Strong, single shot of rich espresso</div>
+      <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Espresso">
+        Order on WhatsApp
+      </a>
+    </div>
+    <div class="price">₹150</div>
   </div>
-  <div class="price">₹150</div>
+
+  <div class="menu-item">
+    <div>
+      <div class="item-name">Cappuccino</div>
+      <div class="item-desc">Espresso with steamed milk & velvety foam</div>
+      <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Cappuccino">
+        Order on WhatsApp
+      </a>
+    </div>
+    <div class="price">₹180</div>
+  </div>
+
+  <div class="menu-item">
+    <div>
+      <div class="item-name">Caffè Latte</div>
+      <div class="item-desc">Smooth espresso with steamed milk</div>
+      <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Caffè%20Latte">
+        Order on WhatsApp
+      </a>
+    </div>
+    <div class="price">₹190</div>
+  </div>
 </div>
 
-<div class="menu-item">
-  <div>
-    <div class="item-name">Cappuccino</div>
-    <div class="item-desc">Milk & foam</div>
-    <a class="order" href="https://wa.me/918076640767">Order on WhatsApp</a>
+<!-- COLD COFFEE -->
+<div class="menu-section">
+  <div class="section-title">🧊 Cold Coffee</div>
+  
+  <div class="menu-item">
+    <div>
+      <div class="item-name">Cold Coffee</div>
+      <div class="item-desc">Chilled coffee with ice, perfectly refreshing</div>
+      <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Cold%20Coffee">
+        Order on WhatsApp
+      </a>
+    </div>
+    <div class="price">₹200</div>
   </div>
-  <div class="price">₹180</div>
+
+  <div class="menu-item">
+    <div>
+      <div class="item-name">Iced Caramel Coffee</div>
+      <div class="item-desc">Cold brew with sweet caramel notes</div>
+      <a class="order" href="https://wa.me/919821504642?text=Hi!%20Order%20Iced%20Caramel%20Coffee">
+        Order on WhatsApp
+      </a>
+    </div>
+    <div class="price">₹220</div>
+  </div>
 </div>
+
 </section>
 
-<a class="whatsapp" href="https://wa.me/918076640767">WhatsApp Order</a>
+<!-- ANONYMOUS WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/919821504642?text=Coffee%20Order%20-%20Ready%20to%20order!">
+☕ Order Coffee
+</a>
 
 </body>
 </html>
