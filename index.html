@@ -5,6 +5,10 @@
 <title>Café & Restaurant</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- SPEED BOOST -->
+<link rel="dns-prefetch" href="//maps.app.goo.gl">
+<link rel="preconnect" href="https://wa.me">
+
 <style>
 :root{
   --bg:#faf7f3;
@@ -13,11 +17,17 @@
   --accent:#8b4a3c;
 }
 
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
   background:var(--bg);
   color:var(--text);
+  line-height:1.5;
 }
 
 header{
@@ -33,6 +43,8 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  max-width:1200px;
+  margin:auto;
 }
 
 nav a{
@@ -40,6 +52,7 @@ nav a{
   margin-left:20px;
   color:var(--text);
   font-size:14px;
+  font-weight:500;
 }
 
 section{
@@ -48,9 +61,8 @@ section{
   padding:80px 40px;
 }
 
-h1{font-size:44px;margin-bottom:12px}
+h1{font-size:44px;margin-bottom:12px;line-height:1.2}
 h2{font-size:30px;margin-bottom:12px}
-
 .highlight{color:var(--accent)}
 
 .divider{
@@ -63,18 +75,22 @@ h2{font-size:30px;margin-bottom:12px}
 .subtitle{
   max-width:650px;
   opacity:.85;
+  font-size:18px;
 }
 
 .btn{
   background:var(--accent);
   color:#fff;
   padding:12px 22px;
-  border-radius:4px;
+  border-radius:6px;
   text-decoration:none;
   margin-right:10px;
   font-size:14px;
   display:inline-block;
+  transition:transform 0.2s;
 }
+
+.btn:hover{transform:translateY(-1px)}
 
 .grid{
   display:grid;
@@ -88,12 +104,24 @@ h2{font-size:30px;margin-bottom:12px}
   border:1px solid #eee;
   border-radius:6px;
   padding:20px;
+  text-align:center;
+  transition:transform 0.2s;
 }
+
+.card:hover{transform:translateY(-2px)}
 
 .card img{
   width:100%;
   border-radius:6px;
   margin-bottom:10px;
+}
+
+.map-container {
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 footer{
@@ -113,52 +141,85 @@ footer{
   padding:14px 20px;
   border-radius:40px;
   text-decoration:none;
+  font-weight:500;
   z-index:999;
+  box-shadow:0 4px 12px rgba(37,211,102,0.4);
 }
 
-/* ===== MOBILE FIXES ===== */
+.whatsapp:hover {
+  background: #20c95b;
+  transform: scale(1.05);
+}
+
+/* SPEED + MOBILE PERFECT */
+img { 
+  content-visibility: auto; 
+  contain-intrinsic-size: 300px 200px;
+  loading: lazy;
+}
+
+#home img { 
+  width: 100%; 
+  height: 220px; 
+  object-fit: cover;
+  border-radius:8px;
+}
+
+/* ===== MOBILE FIXES (PROFESSIONAL) ===== */
 @media (max-width:768px){
   header{padding:12px 16px}
-
+  
   nav{
     flex-direction:column;
-    gap:10px;
+    gap:12px;
   }
-
+  
   nav a{
-    margin:0 10px;
-    font-size:15px;
+    margin:0 8px;
+    font-size:16px;
+    padding:8px 12px;
   }
-
+  
   section{
     padding:50px 16px;
   }
-
+  
   h1{font-size:28px;line-height:1.3}
   h2{font-size:22px}
-
+  
   .btn{
     padding:15px 24px;
     font-size:16px;
     min-height:48px;
+    margin:5px;
+    display:block;
+    text-align:center;
   }
-
-  img{
-    max-width:100%;
-    height:auto;
-  }
-
-  #home img{
-    max-height:220px;
-    object-fit:cover;
-  }
-
+  
+  .subtitle{font-size:16px}
+  
   .whatsapp{
-    bottom:14px;
-    right:14px;
-    padding:14px 18px;
-    font-size:15px;
+    bottom:16px;
+    right:16px;
+    padding:16px 20px;
+    font-size:16px;
   }
+  
+  .grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  
+  .map-container {
+    height: 250px;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width:360px){
+  h1{font-size:24px}
+  section{padding:40px 12px}
+  .map-container { height: 200px; }
 }
 </style>
 </head>
@@ -167,16 +228,18 @@ footer{
 
 <header>
 <nav>
-<strong>Café & Restaurant</strong>
+<strong style="font-size:18px">Café & Restaurant</strong>
 <div>
 <a href="#home">Home</a>
 <a href="cakes.html">Cakes</a>
 <a href="coffee.html">Coffee</a>
+<a href="#location">Location</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 </header>
 
+<!-- HERO -->
 <section id="home">
 <h1>
 Fresh Cakes & Coffee in the  
@@ -191,42 +254,78 @@ A calm café experience where people gather, relax, and enjoy handcrafted food.
 
 <br>
 
-<a class="btn" href="https://wa.me/918076640767">Order on WhatsApp</a>
-<a class="btn" href="tel:+918076640767">Call Now</a>
+<a class="btn" href="https://wa.me/919821504642?text=Hi%2C%20I%20want%20to%20order%20from%20your%20menu">Order on WhatsApp</a>
+<a class="btn" href="tel:+919821504642">Call Now</a>
 
 <br><br>
 
-<img src="mum2.png" alt="Cafe interior" style="width:100%;border-radius:8px">
+<img src="mum2.png" alt="Cafe interior">
 </section>
 
+<!-- OFFERINGS -->
 <section>
 <h2>Our Offerings</h2>
 <div class="divider"></div>
 
 <div class="grid">
-<div class="card"><strong>Fresh Cakes</strong></div>
-<div class="card"><strong>Coffee & Beverages</strong></div>
-<div class="card"><strong>Desserts</strong></div>
-<div class="card"><strong>Savoury Snacks</strong></div>
-<div class="card"><strong>Custom Orders</strong></div>
-<div class="card"><strong>Dine-in & Takeaway</strong></div>
+<div class="card"><strong>Fresh Cakes</strong><br>Custom orders welcome</div>
+<div class="card"><strong>Coffee & Beverages</strong><br>Hot & cold brewed daily</div>
+<div class="card"><strong>Desserts</strong><br>Handcrafted treats</div>
+<div class="card"><strong>Savoury Snacks</strong><br>Quick bites ready</div>
+<div class="card"><strong>Custom Orders</strong><br>Special occasions</div>
+<div class="card"><strong>Dine-in & Takeaway</strong><br>Both available</div>
 </div>
 </section>
 
+<!-- LOCATION RESTORED -->
+<section id="location">
+<h2>Visit Us</h2>
+<div class="divider"></div>
+
+<p style="font-size:18px; margin-bottom:20px">
+Open Daily · 10 AM – 11 PM
+</p>
+
+<div class="map-container">
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.482704575!2d77.20902131525814!3d28.6139399824259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUyLjQiTiA3N8KwMTIuanUnNDguNSJF!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin" 
+  width="100%" 
+  height="100%" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+
+<p style="text-align:center; margin-top:10px; font-size:16px">
+📍 Heart of Delhi - Easy Access
+</p>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 <div class="divider"></div>
 
-<a class="btn" href="https://wa.me/918076640767">WhatsApp</a>
-<a class="btn" href="tel:+918076640767">Call</a>
+<a class="btn" href="https://wa.me/919821504642?text=Hi%2C%20Cafe%20order">WhatsApp Order</a>
+<a class="btn" href="tel:+919821504642">Call Now</a>
+
+<br><br>
+
+<p style="font-size:16px; text-align:center">
+Ready to serve you! 📞 +91 98215 04642
+</p>
 </section>
 
 <footer>
-© 2026 Café & Restaurant — Delhi
+© 2026 Café & Restaurant — Delhi<br>
+Fast WhatsApp Orders • Daily Fresh Baking
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918076640767">
-WhatsApp Order
+<!-- ANONYMOUS WHATSAPP (No "creator" name shown) -->
+<a class="whatsapp" href="https://wa.me/919821504642?text=Cafe%20Order%20-%20Ready%20to%20order!">
+📱 WhatsApp
 </a>
 
 </body>
