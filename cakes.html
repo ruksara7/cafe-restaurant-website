@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Cakes - Café & Restaurant</title> 
+<title>Cakes - Café & Restaurant</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://wa.me">
 
@@ -13,10 +13,7 @@
   --accent:#8b4a3c;
 }
 
-/* SAFE RESET */
-*, *::before, *::after{
-  box-sizing:border-box;
-}
+*,*::before,*::after{box-sizing:border-box;}
 
 body{
   margin:0;
@@ -75,13 +72,12 @@ section{
 h1{
   font-size:42px;
   margin-bottom:10px;
-  line-height:1.2;
 }
 
 .subtitle{
   opacity:.75;
-  margin-bottom:30px;
   font-size:18px;
+  margin-bottom:30px;
 }
 
 .divider{
@@ -93,7 +89,7 @@ h1{
 
 .header-image{
   width:100%;
-  height:auto;              /* DESKTOP NATURAL */
+  height:auto;
   border-radius:12px;
   margin-bottom:40px;
 }
@@ -116,14 +112,12 @@ h1{
 .item-name{
   font-weight:600;
   font-size:20px;
-  margin-bottom:6px;
 }
 
 .item-desc{
   font-size:15px;
   opacity:.8;
-  margin-bottom:12px;
-  line-height:1.5;
+  margin:8px 0 12px;
 }
 
 .price{
@@ -135,29 +129,19 @@ h1{
 .order{
   display:inline-block;
   color:var(--accent);
-  text-decoration:none;
-  padding:12px 24px;
   border:2px solid var(--accent);
+  padding:12px 24px;
   border-radius:8px;
   font-weight:600;
-  font-size:15px;
-  transition:all .25s;
+  text-decoration:none;
 }
 
 .order:hover{
   background:var(--accent);
   color:#fff;
-  transform:translateY(-2px);
 }
 
-/* IMAGES */
-img{
-  max-width:100%;
-  height:auto;
-  border-radius:12px;
-}
-
-/* FLOATING WHATSAPP */
+/* FLOAT WHATSAPP */
 .whatsapp{
   position:fixed;
   bottom:24px;
@@ -171,14 +155,12 @@ img{
   align-items:center;
   justify-content:center;
   font-size:18px;
-  font-weight:600;
   text-decoration:none;
   z-index:999;
-  box-shadow:0 8px 32px rgba(37,211,102,0.4);
 }
 
 /* MOBILE */
-@media (max-width:768px){
+@media(max-width:768px){
   .menu-toggle{display:block;}
 
   #nav-menu{
@@ -189,10 +171,9 @@ img{
     left:12px;
     right:12px;
     background:#fff;
-    padding:24px;
+    padding:20px;
     border-radius:12px;
     box-shadow:0 12px 40px rgba(0,0,0,.2);
-    margin-top:8px;
   }
 
   #nav-menu.active{display:flex;}
@@ -201,7 +182,6 @@ img{
   section{padding:60px 16px;}
   h1{font-size:32px;}
 
-  /* MOBILE IMAGE CROPPING ONLY */
   .header-image{
     height:220px;
     object-fit:cover;
@@ -214,13 +194,6 @@ img{
   }
 
   .price{font-size:28px;}
-  .order{padding:16px 28px;font-size:17px;}
-}
-
-/* EXTRA SMALL */
-@media (max-width:360px){
-  h1{font-size:28px;}
-  section{padding:50px 12px;}
 }
 </style>
 </head>
@@ -241,19 +214,43 @@ img{
 
 <section>
 <h1>🍰 Cake Menu</h1>
-<p class="subtitle">Fresh baked daily in Delhi · Custom orders welcome</p>
+<p class="subtitle">Fresh baked daily · Custom orders welcome</p>
 <div class="divider"></div>
 
-<img src="mum2.png" alt="Fresh cakes" class="header-image" loading="lazy">
+<img src="mum2.png" alt="Fresh cakes" class="header-image">
 
 <div class="section-title">🎂 Classic Cakes</div>
 
-<!-- YOUR MENU ITEMS (UNCHANGED CONTENT) -->
-<!-- keep all your existing menu-item blocks exactly -->
+<div class="menu-item">
+  <div>
+    <div class="item-name">Classic Vanilla Cake</div>
+    <div class="item-desc">Soft sponge with light cream frosting</div>
+    <a class="order" href="https://wa.me/919821504642?text=Order%20Vanilla%20Cake">Order on WhatsApp</a>
+  </div>
+  <div class="price">₹750 / ½ kg</div>
+</div>
+
+<div class="menu-item">
+  <div>
+    <div class="item-name">Chocolate Truffle Cake</div>
+    <div class="item-desc">Rich chocolate layers with ganache</div>
+    <a class="order" href="https://wa.me/919821504642?text=Order%20Chocolate%20Truffle%20Cake">Order on WhatsApp</a>
+  </div>
+  <div class="price">₹850 / ½ kg</div>
+</div>
+
+<div class="menu-item">
+  <div>
+    <div class="item-name">Red Velvet Cake</div>
+    <div class="item-desc">Cream cheese frosting</div>
+    <a class="order" href="https://wa.me/919821504642?text=Order%20Red%20Velvet%20Cake">Order on WhatsApp</a>
+  </div>
+  <div class="price">₹900 / ½ kg</div>
+</div>
 
 </section>
 
-<a class="whatsapp" href="https://wa.me/919821504642?text=Cake%20Order!">🍰</a>
+<a class="whatsapp" href="https://wa.me/919821504642">📱</a>
 
 <script>
 function toggleMenu(){
