@@ -64,7 +64,7 @@ nav a{
 
 /* CONTENT */
 section{
-  max-width:900px;
+  max-width:1050px;
   margin:auto;
   padding:80px 30px;
 }
@@ -77,6 +77,12 @@ h1{
 .subtitle{
   opacity:.75;
   font-size:18px;
+  margin-bottom:10px;
+}
+
+.note{
+  font-size:14px;
+  opacity:.7;
   margin-bottom:30px;
 }
 
@@ -89,7 +95,6 @@ h1{
 
 .header-image{
   width:100%;
-  height:auto;
   border-radius:12px;
   margin-bottom:40px;
 }
@@ -105,8 +110,10 @@ h1{
 .menu-item{
   display:flex;
   justify-content:space-between;
+  align-items:flex-start;
   border-bottom:1px dashed #ddd;
   padding:24px 0;
+  gap:20px;
 }
 
 .item-name{
@@ -124,6 +131,7 @@ h1{
   font-weight:700;
   color:var(--accent);
   font-size:24px;
+  white-space:nowrap;
 }
 
 .order{
@@ -154,7 +162,7 @@ h1{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:18px;
+  font-size:20px;
   text-decoration:none;
   z-index:999;
 }
@@ -182,15 +190,9 @@ h1{
   section{padding:60px 16px;}
   h1{font-size:32px;}
 
-  .header-image{
-    height:220px;
-    object-fit:cover;
-  }
-
   .menu-item{
     flex-direction:column;
     text-align:center;
-    gap:16px;
   }
 
   .price{font-size:28px;}
@@ -215,6 +217,7 @@ h1{
 <section>
 <h1>🍰 Cake Menu</h1>
 <p class="subtitle">Fresh baked daily · Custom orders welcome</p>
+<p class="note">Eggless available • Custom names • Same-day possible</p>
 <div class="divider"></div>
 
 <img src="mum2.png" alt="Fresh cakes" class="header-image">
@@ -225,16 +228,16 @@ h1{
   <div>
     <div class="item-name">Classic Vanilla Cake</div>
     <div class="item-desc">Soft sponge with light cream frosting</div>
-    <a class="order" href="https://wa.me/919821504642?text=Order%20Vanilla%20Cake">Order on WhatsApp</a>
+    <a class="order" href="https://wa.me/919821504642?text=I%20want%20to%20order%20Classic%20Vanilla%20Cake%20(½%20kg)">📲 Order This Cake</a>
   </div>
   <div class="price">₹750 / ½ kg</div>
 </div>
 
 <div class="menu-item">
   <div>
-    <div class="item-name">Chocolate Truffle Cake</div>
-    <div class="item-desc">Rich chocolate layers with ganache</div>
-    <a class="order" href="https://wa.me/919821504642?text=Order%20Chocolate%20Truffle%20Cake">Order on WhatsApp</a>
+    <div class="item-name">Chocolate Truffle Cake ⭐ Bestseller</div>
+    <div class="item-desc">Rich chocolate layers with smooth ganache</div>
+    <a class="order" href="https://wa.me/919821504642?text=I%20want%20to%20order%20Chocolate%20Truffle%20Cake%20(½%20kg)">📲 Order This Cake</a>
   </div>
   <div class="price">₹850 / ½ kg</div>
 </div>
@@ -242,8 +245,8 @@ h1{
 <div class="menu-item">
   <div>
     <div class="item-name">Red Velvet Cake</div>
-    <div class="item-desc">Cream cheese frosting</div>
-    <a class="order" href="https://wa.me/919821504642?text=Order%20Red%20Velvet%20Cake">Order on WhatsApp</a>
+    <div class="item-desc">Classic red velvet with cream cheese frosting</div>
+    <a class="order" href="https://wa.me/919821504642?text=I%20want%20to%20order%20Red%20Velvet%20Cake%20(½%20kg)">📲 Order This Cake</a>
   </div>
   <div class="price">₹900 / ½ kg</div>
 </div>
@@ -257,9 +260,7 @@ function toggleMenu(){
   document.getElementById('nav-menu').classList.toggle('active');
 }
 document.querySelectorAll('nav a').forEach(link=>{
-  link.addEventListener('click',()=>{
-    document.getElementById('nav-menu').classList.remove('active');
-  });
+  link.onclick=()=>document.getElementById('nav-menu').classList.remove('active');
 });
 </script>
 
