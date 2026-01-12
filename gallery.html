@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Gallery - Café & Restaurant</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://wa.me">
 
 <style>
@@ -13,10 +13,7 @@
   --accent:#8b4a3c;
 }
 
-/* SAFE RESET */
-*, *::before, *::after{
-  box-sizing:border-box;
-}
+*, *::before, *::after{box-sizing:border-box;}
 
 body{
   margin:0;
@@ -75,7 +72,6 @@ section{
 h1{
   font-size:42px;
   margin-bottom:10px;
-  line-height:1.2;
 }
 
 .subtitle{
@@ -94,7 +90,7 @@ h1{
 /* HERO IMAGE */
 .header-image{
   width:100%;
-  height:auto;            /* DESKTOP NATURAL */
+  height:auto;
   border-radius:12px;
   margin-bottom:40px;
 }
@@ -104,16 +100,13 @@ h1{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:24px;
-  margin:60px 0;
 }
 
-.gallery-item{
-  position:relative;
-}
+.gallery-item{position:relative;}
 
 .gallery-image{
   width:100%;
-  height:auto;            /* DESKTOP NATURAL */
+  height:auto;
   border-radius:12px;
 }
 
@@ -127,16 +120,13 @@ h1{
   padding:12px 16px;
   border-radius:8px;
   font-size:14px;
-  font-weight:500;
   opacity:0;
-  transition:opacity .3s;
+  transition:.3s;
 }
 
-.gallery-item:hover .gallery-caption{
-  opacity:1;
-}
+.gallery-item:hover .gallery-caption{opacity:1;}
 
-/* FLOATING WHATSAPP */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   bottom:24px;
@@ -149,22 +139,12 @@ h1{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:18px;
-  font-weight:600;
   text-decoration:none;
   z-index:999;
-  box-shadow:0 8px 32px rgba(37,211,102,.4);
-}
-
-/* IMAGES */
-img{
-  max-width:100%;
-  height:auto;
-  border-radius:12px;
 }
 
 /* MOBILE */
-@media (max-width:768px){
+@media(max-width:768px){
   .menu-toggle{display:block;}
 
   #nav-menu{
@@ -178,39 +158,21 @@ img{
     padding:24px;
     border-radius:12px;
     box-shadow:0 12px 40px rgba(0,0,0,.2);
-    margin-top:8px;
   }
 
   #nav-menu.active{display:flex;}
 
   header{padding:12px 16px;}
   section{padding:60px 16px;}
-  h1{font-size:36px;}
+  h1{font-size:32px;}
 
-  /* MOBILE IMAGE CROPPING ONLY */
   .header-image,
   .gallery-image{
     height:220px;
     object-fit:cover;
   }
 
-  .gallery-grid{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-
-  .whatsapp{
-    bottom:20px;
-    right:20px;
-    width:56px;
-    height:56px;
-  }
-}
-
-/* EXTRA SMALL */
-@media (max-width:360px){
-  h1{font-size:28px;}
-  section{padding:50px 12px;}
+  .gallery-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -235,51 +197,51 @@ img{
 <p class="subtitle">Our café through your eyes · Fresh moments captured in Delhi</p>
 <div class="divider"></div>
 
-<img src="mum2.png" alt="Café exterior" class="header-image" loading="lazy">
+<img src="./mum2.png" alt="Café exterior" class="header-image" loading="lazy">
 
 <div class="gallery-grid">
+
   <div class="gallery-item">
-    <img src="mum3.png" alt="Coffee prep" class="gallery-image" loading="lazy">
+    <img src="./mum3.png" class="gallery-image" loading="lazy">
     <div class="gallery-caption">Coffee crafted with care</div>
   </div>
 
   <div class="gallery-item">
-    <img src="mum4.png" alt="Team" class="gallery-image" loading="lazy">
-    <div class="gallery-caption">Our friendly Delhi team</div>
+    <img src="./mum4.png" class="gallery-image" loading="lazy">
+    <div class="gallery-caption">Our friendly team</div>
   </div>
 
   <div class="gallery-item">
-    <img src="mum5.png" alt="Interior" class="gallery-image" loading="lazy">
-    <div class="gallery-caption">Cozy Delhi atmosphere</div>
+    <img src="./mum5.png" class="gallery-image" loading="lazy">
+    <div class="gallery-caption">Cozy café interior</div>
   </div>
 
   <div class="gallery-item">
-    <img src="mum6.png" alt="Pastries" class="gallery-image" loading="lazy">
+    <img src="./mum6.png" class="gallery-image" loading="lazy">
     <div class="gallery-caption">Fresh daily bakes</div>
   </div>
 
   <div class="gallery-item">
-    <img src="mum7.png" alt="Drinks" class="gallery-image" loading="lazy">
+    <img src="./mum7.png" class="gallery-image" loading="lazy">
     <div class="gallery-caption">Refreshing beverages</div>
   </div>
 
   <div class="gallery-item">
-    <img src="mum8.png" alt="Dining" class="gallery-image" loading="lazy">
+    <img src="./mum8.png" class="gallery-image" loading="lazy">
     <div class="gallery-caption">Perfect dining setup</div>
   </div>
+
 </div>
 
-<a class="whatsapp" href="https://wa.me/919821504642?text=Hi!%20Loved%20the%20gallery!">📱</a>
+<a class="whatsapp" href="https://wa.me/919821504642">📱</a>
 </section>
 
 <script>
 function toggleMenu(){
   document.getElementById('nav-menu').classList.toggle('active');
 }
-document.querySelectorAll('nav a').forEach(link=>{
-  link.addEventListener('click',()=>{
-    document.getElementById('nav-menu').classList.remove('active');
-  });
+document.querySelectorAll('nav a').forEach(a=>{
+  a.onclick=()=>document.getElementById('nav-menu').classList.remove('active');
 });
 </script>
 
